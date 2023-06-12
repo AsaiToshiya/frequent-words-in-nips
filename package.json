@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/AsaiToshiya/node-boilerplate#readme",
   "engines": {
-    "node": ">=14.16"
+    "node": ">=16"
+  },
+  "dependencies": {
+    "marked": "^5.0.5",
+    "natural": "^6.5.0"
   }
 }
