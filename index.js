@@ -92,12 +92,10 @@ const download = async (url) =>
 const extractWords = (markdown) =>
   marked
     .lexer(markdown)
-    .map(flatToken)
-    .flat()
+    .flatMap(flatToken)
     .filter((token) => token.text)
     .map((token) => token.text)
-    .map((text) => text.split(/\s/))
-    .flat()
+    .flatMap((text) => text.split(/\s/))
     .map((word) =>
       decodeHTMLEntities(word).replace(/^\W+/, "").replace(/\W+$/, "")
     )
